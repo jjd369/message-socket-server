@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon -r esm index.js",
-    "clientStart": "nodemon -r esm client.js"
+    "start": "node -r esm index.js",
+    "devStart": "nodemon -r esm index.js "
   },
   "author": "",
   "license": "ISC",
