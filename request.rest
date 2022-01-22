@@ -1,0 +1,57 @@
+
+GET http://localhost:3333/message/messageRoom?name=tester
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoidGVzdGVyIiwiaWF0IjoxNjQyNDIxNDA5LCJleHAiOjE2NDI0MjMyMDl9.4NhbRBt8LzHkoVL8mMhFTWg2eqNGkXG-dWeuFjGKY_E
+### message get by id
+GET http://localhost:3333/message/message?id=61e552dd41b4dc840352cc8f
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoidGVzdGVyIiwiaWF0IjoxNjQyNDI5NjE2LCJleHAiOjE2NDI0MzE0MTZ9.I8XB-lYYGf1hWCEAaJnjfehmyTXok1p_bjPYcCaiAZI
+
+####
+GET http://localhost:3333/user/users
+
+###
+POST http://localhost:3333/message/roomCreate
+Content-Type: application/json
+
+{
+  "members": ["tester3","tester"]
+}
+###
+PATCH http://localhost:3333/message/updateMessage
+Content-Type: application/json
+
+{
+  "id": "61e552dd41b4dc840352cc8f",
+  "messages": {
+          "sender": "55",
+          "message": "55 "
+        }
+}
+####
+POST http://localhost:3333/auth/signUp
+Content-Type: application/json
+
+{
+  "name": "tester",
+  "password": "123123"
+}
+
+###
+POST http://localhost:3333/auth/signIn
+Content-Type: application/json
+
+{
+  "name": "tester",
+  "password": "123123"
+}
+
+####
+DELETE http://localhost:3333/auth/logOut
+Content-Type: application/json
+
+{
+  "name": "tester",
+  "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoidGVzdGVyIiwiaWF0IjoxNjQyMzk3MzA0LCJleHAiOjE2NDMwMDIxMDR9.Ro9XNSrSSXw93Yj5piDZHY3VTtrRIKxVky55bsOUrkM"
+
+}
+####
+GET http://localhost:3333/auth/tokens

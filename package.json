@@ -6,15 +6,32 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node -r esm index.js",
-    "devStart": "nodemon -r esm index.js "
+    "devStart": "nodemon --exec babel-node index.js ",
+    "devClientStart": "nodemon -r esm client.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "auto-bind": "^5.0.1",
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
     "esm": "^3.2.25",
     "express": "^4.17.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.1.5",
     "nodemon": "^2.0.15",
     "socket.io": "^4.4.0",
     "socket.io-client": "^4.4.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.16.8",
+    "@babel/core": "^7.16.7",
+    "@babel/node": "^7.16.8",
+    "@babel/preset-env": "^7.16.8",
+    "eslint": "^8.6.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.5.1"
   }
 }
