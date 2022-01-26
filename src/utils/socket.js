@@ -24,7 +24,9 @@ io.on("connection", socket => {
     login_users.delete(username)
     // io.emit("new user", [...login_users.keys()]);
   })
+  socket.on("message update", (message) => {
 
+  })
   socket.on("disconnect", () => {
     console.log('disconnection')
     // users = users.filter(u => u.id !== socket.id);

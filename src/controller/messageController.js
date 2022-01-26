@@ -17,7 +17,7 @@ class MessageController extends Controller {
     const result = await this.service.getMessage(req.query);
     return res.status(result.statusCode).json(result.data);
   }
-  async pushMessage(req, res, next) {
+  async pushMessage(req, res,) {
     const result = await this.service.pushMessage(req.body.id, req.body);
     return res.status(result.statusCode).json(result.data);
   }
